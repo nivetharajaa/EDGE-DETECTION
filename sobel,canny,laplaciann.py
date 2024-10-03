@@ -1,9 +1,9 @@
 import cv2
 import matplotlib.pyplot as plt
 
-//TYPE THE CODE HERE TO READ THE IMAGE UISNG IMREAD 
-gray=cv2.cvtColor(img,)//CONVERT THE COLOR TO GRAY TO RGB
-gray = cv2.GaussianBlur(gray,(3,3),0)
+i=cv2.imread('land.jpeg',-1)
+gray=cv2.cvtColor(i,cv2.COLOR_BGR2GRAY)
+img = cv2.GaussianBlur(gray,(3,3),0)
 
 sobelx = cv2.Sobel(gray,cv2.CV_64F,1,0,ksize=5)
 plt.figure(figsize=(8,8))
